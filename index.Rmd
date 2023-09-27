@@ -11,4 +11,4 @@ output:
 
 ## Project thoughts
 
-I am interested in exploring data related to sports specifically swimming.
+I am interested in exploring data related to sports specifically swimming. I am interested in maybe looking at the differences between men and women's sports specifically in the swimming world.
