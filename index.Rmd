@@ -10,5 +10,17 @@ output:
 
 
 ## Project thoughts
+Stephanie Iannaccone
+https://www.afrobarometer.org/wp-content/uploads/migrated/files/publications/Policy%20papers/ab_r7_policypaperno60_experience_and_awareness_of_climate_change_in_africa.pdf
 
-I am interested in exploring data related to sports specifically swimming. I am interested in maybe looking at the differences between men and women's sports specifically in the swimming world.
+State your research question.
+What are the differences in drought patterns between Morocco and Uganda, and how can these differences be explained by behavioral and institutional factors?
+Formulate a hypothesis related to the research question. This hypothesis should be rooted in some sort of theory. In other words, you need to present a plausible story why the hypothesis might be true. Often, this is in the form of a behaviorial or institutional explanation. As social scientists, we are not interested in idiosyncratic explanations; we want to understand systematic patterns and relationships!
+Hypothesis: The variation in drought patterns between Morocco and Uganda can be explained by differences in their agricultural practices and institutional responses. Uganda, with a high percentage of worsening drought reports (87%), is more susceptible to droughts due to its reliance on rain-fed agriculture and limited adaptive measures. In contrast, Morocco, with a lower percentage of worsening drought reports (18%), has implemented more effective water management and irrigation systems, reducing its vulnerability to drought.
+Describe your explanatory variable(s) of interest and how it is measured. Importantly, we need to observe variation in this variable in order to study it!
+Explanatory Variable: The explanatory variable of interest is "Agricultural Practices and Institutional Responses to Drought." It is measured by factors such as irrigation infrastructure, water management policies, crop diversification, and drought preparedness programs. 
+Describe your outcome variable of interest and how it is measured.
+Outcome Variable: The outcome variable of interest is "Drought Severity" and is measured by the percentage of respondents reporting worsening drought conditions in each country. This data can be obtained from surveys and climate reports. 
+What observed pattern in the data would provide support for your hypothesis? More importantly, what observed pattern would disprove your hypothesis?
+Observed Pattern Supporting Hypothesis: An observed pattern that would support the hypothesis is a strong negative correlation between reported worsening drought conditions and effective agricultural practices and institutional responses. 
+Observed Pattern Disproving Hypothesis: A pattern that would disprove the hypothesis is if both Uganda and Morocco reported similar levels of worsening drought conditions despite differences in agricultural practices and institutional responses. 
