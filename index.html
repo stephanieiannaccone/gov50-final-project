@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.24/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.24/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1517,20 +1517,43 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>US_Daily_Climate_csv</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"~/Library/Mobile Documents/com~apple~Numbers/Documents/US_Daily_Climate_csv.csv"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/View.html'>View</a></span><span class='op'>(</span><span class='va'>US_Daily_Climate_csv</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>US_Daily_Climate</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>US_Daily_Climate_csv</span>, </span>
+<span>       mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`MTD-PRCP-NORMAL`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='va'>US_Daily_Climate</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+</div>
 <h2 id="project-thoughts">Project thoughts</h2>
 <p>Stephanie Iannaccone
-<a href="https://www.afrobarometer.org/wp-content/uploads/migrated/files/publications/Policy%20papers/ab_r7_policypaperno60_experience_and_awareness_of_climate_change_in_africa.pdf" class="uri">https://www.afrobarometer.org/wp-content/uploads/migrated/files/publications/Policy%20papers/ab_r7_policypaperno60_experience_and_awareness_of_climate_change_in_africa.pdf</a></p>
-<p>State your research question.
-What are the differences in drought patterns between Morocco and Uganda, and how can these differences be explained by behavioral and institutional factors?
-Formulate a hypothesis related to the research question. This hypothesis should be rooted in some sort of theory. In other words, you need to present a plausible story why the hypothesis might be true. Often, this is in the form of a behaviorial or institutional explanation. As social scientists, we are not interested in idiosyncratic explanations; we want to understand systematic patterns and relationships!
-Hypothesis: The variation in drought patterns between Morocco and Uganda can be explained by differences in their agricultural practices and institutional responses. Uganda, with a high percentage of worsening drought reports (87%), is more susceptible to droughts due to its reliance on rain-fed agriculture and limited adaptive measures. In contrast, Morocco, with a lower percentage of worsening drought reports (18%), has implemented more effective water management and irrigation systems, reducing its vulnerability to drought.
-Describe your explanatory variable(s) of interest and how it is measured. Importantly, we need to observe variation in this variable in order to study it!
-Explanatory Variable: The explanatory variable of interest is “Agricultural Practices and Institutional Responses to Drought.” It is measured by factors such as irrigation infrastructure, water management policies, crop diversification, and drought preparedness programs.
-Describe your outcome variable of interest and how it is measured.
-Outcome Variable: The outcome variable of interest is “Drought Severity” and is measured by the percentage of respondents reporting worsening drought conditions in each country. This data can be obtained from surveys and climate reports.
-What observed pattern in the data would provide support for your hypothesis? More importantly, what observed pattern would disprove your hypothesis?
-Observed Pattern Supporting Hypothesis: An observed pattern that would support the hypothesis is a strong negative correlation between reported worsening drought conditions and effective agricultural practices and institutional responses.
-Observed Pattern Disproving Hypothesis: A pattern that would disprove the hypothesis is if both Uganda and Morocco reported similar levels of worsening drought conditions despite differences in agricultural practices and institutional responses.</p>
+<a href="https://catalog.data.gov/dataset/u-s-daily-climate-normals-1981-20101" class="uri">https://catalog.data.gov/dataset/u-s-daily-climate-normals-1981-20101</a></p>
+<p>State your research question.</p>
+<p>How have the daily climate normals for 1981 to 2010 in the United States evolved over time, and what are the regional variations and trends in maximum and minimum temperatures, precipitation, and wind patterns?</p>
+<p>Formulate a hypothesis related to the research question. This hypothesis should be rooted in some sort of theory. In other words, you need to present a plausible story why the hypothesis might be true. Often, this is in the form of a behaviorial or institutional explanation. As social scientists, we are not interested in idiosyncratic explanations; we want to understand systematic patterns and relationships!</p>
+<p>Hypothesis:Based on the U.S. Daily Climate Normals dataset for 1981 to 2010, I hypothesize that there has been a statistically significant increase in the average maximum temperatures across the United States during this 30-year period. This increase is likely due to climate change and can be shown by analyzing the daily maximum temperature normals at a regional scale.</p>
+<p>Describe your explanatory variable(s) of interest and how it is measured. Importantly, we need to observe variation in this variable in order to study it!</p>
+<p>Explanatory Variable: The explanatory variables are geographic location and is defined by latitude and longitude. Time is analyze how climate normals have changed over this specific time frame through the meteorological parameters. Elevation of the weather station location can help when studying how temperature and other meteorological parameters are influenced by altitude.</p>
+<p>Geographic location is measured by latitude and longitude coordinates. Time is measured in years or months within the specified 30-year period. Elevation is measured in feet above sea level.</p>
+<p>Describe your outcome variable of interest and how it is measured.</p>
+<p>Outcome Variable: The outcome variable of interest is the daily maximum temperature normal. This variable represents the long-term average daily maximum temperature for specific locations across the United States and other included regions over the 30-year period from 1981 to 2010. The daily maximum temperature normal is measured in degrees Fahrenheit and is derived from historical meteorological data collected at thousands of weather stations, including those in the NWS Cooperative Observer Program (COOP) Network, Weather Bureau Army-Navy (WBAN) stations, and stations from the Climate Reference Network (CRN).</p>
+<p>Observed Pattern Supporting Hypothesis: An observed pattern supporting the hypothesis that there has been a statistically significant increase in the average maximum temperatures across the United States during the 30-year period from 1981 to 2010.</p>
+<p>Observed Pattern Disproving Hypothesis: The observed pattern shows that there was no statistically significant increase in the average maximum temperatures or even a decrease over the 30-year period.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
