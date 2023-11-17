@@ -17,6 +17,8 @@ library(ggplot2)
 ```{r}
 US_Daily_Climate_csv <- read_csv("~/Library/Mobile Documents/com~apple~Numbers/Documents/US_Daily_Climate_csv.csv")
 View(US_Daily_Climate_csv)
+
+US_Daily_Climate_csv$DATE <- as.Date(US_Daily_Climate_csv$DATE, format = "%Y-%m-%d")
 ```
 
 ```{r}
@@ -26,7 +28,29 @@ US_Daily_Climate <- ggplot(data = US_Daily_Climate_csv,
 US_Daily_Climate
 ```
 
+```{r}
+summary_stats <- summarize(US_Daily_Climate_csv,
+                            Mean_TMIN = mean(`DLY-TMIN-NORMAL`, na.rm = TRUE),
+                            SD_TMIN = sd(`DLY-TMIN-NORMAL`, na.rm = TRUE),
+                            Mean_TMAX = mean(`DLY-TMAX-NORMAL`, na.rm = TRUE),
+                            SD_TMAX = sd(`DLY-TMAX-NORMAL`, na.rm = TRUE))
 
+summary_stats
+
+knitr::kable(summary_stats, digits = 2)
+
+```
+## Analysis Discussion
+
+Daily Minimum Temperature:
+Mean Daily Minimum Temperature: The calculated mean daily minimum temperature is 21.4°C. This statistic represents the average value of the daily minimum temperatures observed in the dataset. It serves as a central measure, indicating the typical temperature conditions for the given period.
+
+Standard Deviation of Daily Minimum Temperature: The standard deviation of 282.04°C reflects the extent to which individual daily minimum temperatures deviate from the mean. A higher standard deviation suggests greater variability, indicating that the dataset may include days with widely different minimum temperatures.
+
+Daily Maximum Temperature:
+Mean Daily Maximum Temperature: The mean daily maximum temperature is 49.32°C, representing the average value of the daily maximum temperatures recorded. Similar to Mean_TMIN, this statistic provides a central measure for understanding typical temperature conditions.
+
+Standard Deviation of Daily Maximum Temperature: With a standard deviation of 237.93°C, the variability in daily maximum temperatures is somewhat lower compared to the daily minimum temperatures. A lower standard deviation suggests that the maximum temperatures may exhibit less variability.
 
 ## Project thoughts
 Stephanie Iannaccone
