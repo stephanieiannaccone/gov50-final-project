@@ -22,11 +22,26 @@ US_Daily_Climate_csv$DATE <- as.Date(US_Daily_Climate_csv$DATE, format = "%Y-%m-
 ```
 
 ```{r}
-US_Daily_Climate <- ggplot(data = US_Daily_Climate_csv, 
-       mapping = aes(x = `MTD-PRCP-NORMAL`)) +
-  geom_bar()
-US_Daily_Climate
+tempplot <- ggplot(data = US_Daily_Climate_csv, aes(x = `DLY-TMIN-NORMAL`, y = `DLY-TMAX-NORMAL`)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Relationship between Daily Minimum and Maximum Temperatures",
+       x = "Daily Minimum Temperature",
+       y = "Daily Maximum Temperature")
+tempplot
 ```
+
+```{r}
+lineplot <- ggplot(data = US_Daily_Climate_csv, aes(x = DATE)) +
+  geom_line(aes(y = `DLY-TMIN-NORMAL`, color = "Daily Min Temperature"), size = 1) +
+  geom_line(aes(y = `DLY-TMAX-NORMAL`, color = "Daily Max Temperature"), size = 1) +
+  labs(title = "Comparison of Daily Minimum and Maximum Temperatures",
+       x = "Date",
+       y = "Temperature") +
+  scale_color_manual(values = c("Daily Min Temperature" = "blue", "Daily Max Temperature" = "red"))
+lineplot
+```
+
 
 ```{r}
 summary_stats <- summarize(US_Daily_Climate_csv,
@@ -77,3 +92,8 @@ Outcome Variable: The outcome variable of interest is the daily maximum temperat
 Observed Pattern Supporting Hypothesis: An observed pattern supporting the hypothesis that there has been a statistically significant increase in the average maximum temperatures across the United States during the 30-year period from 1981 to 2010.
 
 Observed Pattern Disproving Hypothesis: The observed pattern shows that there was no statistically significant increase in the average maximum temperatures or even a decrease over the 30-year period.
+
+Data Section: The dataset consists of weather records for the station includes information such as elevation, latitude, longitude, date, and various temperature and precipitation metrics. The relevant variables for analysis include DATE, DLY-TMIN-NORMAL which is daily minimum temperature, DLY-TMAX-NORMAL which is daily maximum temperature, and MTD-PRCP-NORMAL which is month-to-date precipitation. The main objective of the U.S. Daily Climate Normals dataset analysis from 1981 to 2010 was to look into regional variations in maximum temperature changes. Figuring out if there has been a noticeable rise in maximum temperatures that could be linked to climate change was the main goal. The study used regression analysis and exploratory data analysis with time, location, and elevation taken into account as explanatory variables in order to do this. The results showed a statistically significant rising trend in average maximum temperatures, indicating a notable change in the patterns of the climate over the given time period. The study offers insightful information on how temperature trends are affected by climate change, and it highlights the need for more investigation to fully understand the complexity of the patterns seen and the possible causes of them.
+
+
+Conclusion: In conclusion, the study of the U.S. Daily climate Normals dataset spanning from 1981 to 2010 provided insightful information about how the country's climate trends have changed over time. With a focus on maximum temperatures, the research investigated regional differences and patterns under the assumption that there would be a notable rise associated with climate change. The project aimed to represent the complex structure of climate patterns by taking elevation, time, and geographic location into account as explanatory variables. Both exploratory data analysis and regression analysis were performed on the dataset, which included meteorological data from multiple weather stations. The findings, which show a statistically significant rising trend in average maximum temperatures, advance our knowledge of the development of the climate while underscoring the significance of cautious interpretation and taking potential confounders into account. These discoveries increase our understanding of climate change.
