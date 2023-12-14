@@ -13,7 +13,7 @@ library(dplyr)
 library(readr)
 library(ggplot2)
 ```
-
+dk
 ```{r}
 US_Daily_Climate_csv <- read_csv("~/Library/Mobile Documents/com~apple~Numbers/Documents/US_Daily_Climate_csv.csv")
 View(US_Daily_Climate_csv)
